@@ -85,6 +85,9 @@ ul {
 .team {
   background-color: #f4f4fd;
 }
+.team-item {
+  background-color: #fff;
+}
 .team-title {
   font-size: 36px;
   font-weight: 700;
@@ -114,9 +117,6 @@ ul {
   text-transform: capitalize;
   color: #2e2f42;
   text-align: center;
-}
-.portfolio-item {
-  background-color: #fff;
 }
 .portfolio-subtitle {
   font-size: 20px;
