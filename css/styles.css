@@ -105,9 +105,7 @@ ul {
   letter-spacing: 0.32px;
 }
 /* ============================PORTFOLIO STYLES============================ */
-.portfolio {
-  background-color: #fff;
-}
+
 .portfolio-title {
   font-size: 36px;
   font-weight: 700;
@@ -116,6 +114,9 @@ ul {
   text-transform: capitalize;
   color: #2e2f42;
   text-align: center;
+}
+.portfolio-item {
+  background-color: #fff;
 }
 .portfolio-subtitle {
   font-size: 20px;
@@ -128,13 +129,16 @@ ul {
   letter-spacing: 0.32px;
 }
 /* ==================FOOTER STYLES================ */
-footer {
+.mail-footer {
   background: #2e2f42;
   color: #f4f4fd;
 }
-footer .link-logo {
-  color: #f4f4fd;
+.main-footer .link-logo {
+  color: #4d5ae5;
   letter-spacing: 0.03em;
+}
+.main-footer .web-logo {
+  color: #f4f4fd;
 }
 .footer-text {
   letter-spacing: 0.02em;
