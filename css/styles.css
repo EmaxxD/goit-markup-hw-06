@@ -1,0 +1,138 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #434455;
+}
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+/* =============HEADER STYLES============= */
+.link-logo {
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: 0.54px;
+  text-transform: uppercase;
+  color: #2e2f42;
+}
+.web-logo {
+  color: #4d5ae5;
+}
+.nav-list {
+  font-weight: 500;
+  letter-spacing: 0.32px;
+}
+.header-nav .link {
+  color: #2e2f42;
+}
+.contacts {
+  font-style: normal;
+  letter-spacing: 0.32px;
+}
+.contacts .link {
+  color: #434455;
+}
+.link:hover,
+.link:focus,
+.link:active {
+  color: #404bbf;
+  text-decoration: underline;
+}
+/* =================HERO STYLES================ */
+.hero {
+  background: #2e2f42;
+  text-align: center;
+}
+.hero-title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.07;
+  letter-spacing: 1.12px;
+  color: #fff;
+}
+.hero-btn {
+  color: #fff;
+  background: #4d5ae5;
+  font-weight: 500;
+  letter-spacing: 0.64px;
+  cursor: pointer;
+}
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: #404bbf;
+}
+/* ===================ADVANTAGES STYLES======================= */
+.advantages-subtitle {
+  color: #2e2f42;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+}
+.advantages-text {
+  letter-spacing: 0.32px;
+}
+/* ==================OUR TEAM STYLES================== */
+.team {
+  background-color: #f4f4fd;
+}
+.team-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.72px;
+  text-transform: capitalize;
+  text-align: center;
+  color: #2e2f42;
+}
+.team-subtitle,
+.team-text {
+  text-align: center;
+  width: 264px;
+}
+.team-subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+  color: #2e2f42;
+}
+.team-text {
+  letter-spacing: 0.32px;
+}
+/* ============================PORTFOLIO STYLES============================ */
+.portfolio-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.72px;
+  text-transform: capitalize;
+  color: #2e2f42;
+  text-align: center;
+}
+.portfolio-subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+  color: #2e2f42;
+}
+.portfolio-text {
+  letter-spacing: 0.32px;
+}
+/* ==================FOOTER STYLES================ */
+footer {
+  background: #2e2f42;
+  color: #f4f4fd;
+}
+footer .link-logo {
+  color: #f4f4fd;
+  letter-spacing: 0.32px;
+}
