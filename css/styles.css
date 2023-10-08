@@ -134,13 +134,10 @@ ul {
   display: flex;
   gap: 24px;
 }
-.advatages-item {
+.advantages-item {
   width: calc((100% - 72px) / 4);
 }
 
-.advantages-title {
-  visibility: hidden;
-}
 .advantages-subtitle {
   color: #2e2f42;
   font-size: 20px;
