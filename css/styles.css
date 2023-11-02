@@ -405,22 +405,25 @@ button {
   margin-bottom: 16px;
   font-weight: 500;
   letter-spacing: 0.02em;
+  color: #ffffff;
 }
 .footer-form-email {
   width: 264px;
   height: 40px;
-  background-color: #2e2f42;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  background-color: transparent;
   padding: 8px 0 8px 16px;
   border-radius: 4px;
   border: 1px solid #fff;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   outline: transparent;
   outline-offset: 4px;
   color: #ffffff;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 .footer-form-email::placeholder {
-  font-size: 12px;
-  letter-spacing: 0.04em;
   color: #fff;
 }
 
@@ -432,17 +435,20 @@ button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
   font-family: inherit;
   font-weight: 500;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   padding: 8px 24px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   background-color: #4d5ae5;
   color: #fff;
   border: none;
   border-radius: 4px;
+}
+.footer-submit-btn {
+  margin-left: 16px;
 }
 /* ======================= BACKDROP STYLES ======================= */
 .backdrop {
@@ -478,9 +484,13 @@ button {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-btn {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 24px;
   right: 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -491,9 +501,12 @@ button {
   height: 24px;
   border-radius: 50%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-close-btn-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   background-color: #404bbf;
@@ -527,8 +540,9 @@ button {
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   outline: transparent;
+  background-color: transparent;
   outline-offset: 4px;
-  padding-left: 36px;
+  padding-left: 38px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input-wrapper {
@@ -550,8 +564,11 @@ button {
 }
 .form-message {
   width: 100%;
-  height: 138px;
+  height: 120px;
   padding: 8px 16px;
+  margin-bottom: 16px;
+  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
   resize: none;
   outline: transparent;
   outline-offset: 4px;
@@ -589,9 +606,13 @@ button {
   margin-right: 8px;
   cursor: pointer;
   fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-checkbox:checked + .form-checkbox-label .custom-checkbox {
-  background-color: #4d5ae5;
+  background-color: #404bbf;
+  border: none;
   fill: #f4f4fd;
 }
 
@@ -606,15 +627,17 @@ button {
 .form-submit-btn {
   min-width: 169px;
   height: 56px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
   padding: 16px 32px;
   display: block;
   margin: 0 auto;
   text-align: center;
-  font-weight: 500;
-  letter-spacing: 0.04em;
   color: #fff;
   border: none;
   border-radius: 4px;
   background: #4d5ae5;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
