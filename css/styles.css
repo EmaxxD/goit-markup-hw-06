@@ -27,6 +27,21 @@ ul {
   margin: 0 auto;
   padding-left: 0;
 }
+button {
+  cursor: pointer;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /* transition: 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 .section {
   padding-top: 120px;
@@ -163,18 +178,7 @@ ul {
 .advantages-item {
   width: calc((100% - 72px) / 4);
 }
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
+
 .advantages-subtitle {
   color: #2e2f42;
   font-size: 20px;
@@ -359,13 +363,16 @@ ul {
 .logotype {
   margin-right: 120px;
 }
+.socialmedia-wrapper {
+  margin-right: 80px;
+}
 .socialmedia-text {
   color: #fff;
   margin-bottom: 16px;
   font-weight: 500;
   letter-spacing: 0.02em;
 }
-.cosialmedia-list {
+.sosialmedia-list {
   display: flex;
   gap: 16px;
 }
@@ -390,6 +397,53 @@ ul {
 .socialmedia-icon {
   fill: #f4f4fd;
 }
+.footer-form.wrapper {
+  width: 453px;
+  height: 80px;
+}
+.footer-form-text {
+  margin-bottom: 16px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.footer-form-email {
+  width: 264px;
+  height: 40px;
+  background-color: #2e2f42;
+  padding: 8px 0 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  outline: transparent;
+  outline-offset: 4px;
+  color: #ffffff;
+}
+.footer-form-email::placeholder {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.footer-form {
+  display: flex;
+  gap: 24px;
+}
+.footer-form-submit {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 8px 24px;
+  width: 165px;
+  height: 40px;
+  background-color: #4d5ae5;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
 /* ======================= BACKDROP STYLES ======================= */
 .backdrop {
   position: fixed;
@@ -398,13 +452,169 @@ ul {
   width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
+  z-index: 999999;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.backdrop-form-wrapper {
+.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+/* ======================= /BACKDROP STYLES ====================== */
+/* ======================= MODAL WINDOW ====================== */
+.modal {
   position: absolute;
-  top: 80px;
+  top: 50%;
   left: 50%;
   width: 408px;
   min-height: 584px;
-  transform: translateX(-50%);
+  padding: 72px 24px 24px;
+  transform: translate(-50%, -50%);
   background-color: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #e7e9fc;
+  padding: 0;
+  line-height: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: #404bbf;
+  border: none;
+  fill: #fff;
+}
+
+.modal-text {
+  font-weight: 500;
+  text-align: center;
+  color: #2e2f42;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+/* ======================= /MODAL WINDOW ====================== */
+/* ==========================MODAL-FORM S======================== */
+.form-field-wrapper {
+  margin-bottom: 8px;
+}
+.form-field-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+.form-field {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  outline: transparent;
+  outline-offset: 4px;
+  padding-left: 36px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input-wrapper {
+  position: relative;
+}
+.form-field-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-field:focus-within {
+  border-color: #4d5ae5;
+}
+.form-field:focus-within + .form-field-icon {
+  fill: #4d5ae5;
+}
+.form-message {
+  width: 100%;
+  height: 138px;
+  padding: 8px 16px;
+  resize: none;
+  outline: transparent;
+  outline-offset: 4px;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-message::placeholder {
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.form-message:focus-within {
+  border-color: #4d5ae5;
+}
+.form-checkbox-wrapper {
+  margin-bottom: 24px;
+}
+.form-checkbox-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+.custom-checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  margin-right: 8px;
+  cursor: pointer;
+  fill: transparent;
+}
+.form-checkbox:checked + .form-checkbox-label .custom-checkbox {
+  background-color: #4d5ae5;
+  fill: #f4f4fd;
+}
+
+.form-privacy-policy-link {
+  font-size: 12px;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  text-decoration-line: underline;
+  color: #4d5ae5;
+  display: inline-block;
+}
+.form-submit-btn {
+  min-width: 169px;
+  height: 56px;
+  padding: 16px 32px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  background: #4d5ae5;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
