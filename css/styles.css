@@ -584,7 +584,6 @@ button {
 .form-message::placeholder {
   color: rgba(46, 47, 66, 0.4);
 }
-
 .form-message:focus-within {
   border-color: #4d5ae5;
 }
