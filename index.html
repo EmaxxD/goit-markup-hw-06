@@ -52,7 +52,9 @@
       <section class="hero section">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button class="hero-btn" type="button">Order Service</button>
+          <button class="hero-btn" id="open-form-modal-btn" type="button">
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -467,8 +469,8 @@
       </div>
     </footer>
     <!-- =======================BACKDROP========================== -->
-    <div class="backdrop">
-      <div class="modal" id="form-modal">
+    <div class="backdrop" id="form-modal">
+      <div class="modal">
         <button class="modal-close-btn" type="button">
           <svg
             class="modal-close-btn-icon"
@@ -480,7 +482,7 @@
           </svg>
         </button>
         <p class="modal-text">Leave your contacts and we will call you back</p>
-        <form class="modal-form">
+        <form class="modal-form" id="form">
           <div class="form-field-wrapper">
             <label class="form-field-label" for="user-name"> Name </label>
             <div class="form-input-wrapper">
@@ -562,7 +564,9 @@
               ></label
             >
           </div>
-          <button class="form-submit-btn" type="submit">Send</button>
+          <button class="form-submit-btn" id="launch-btn" type="submit">
+            Send
+          </button>
         </form>
       </div>
     </div>
