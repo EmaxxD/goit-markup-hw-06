@@ -207,6 +207,8 @@ button {
 /* ==================OUR TEAM STYLES================== */
 .team {
   background-color: #f4f4fd;
+  padding-right: 28px;
+  padding-left: 28px;
 }
 .team-item {
   background-color: #fff;
