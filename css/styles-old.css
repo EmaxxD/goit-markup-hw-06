@@ -29,6 +29,9 @@ ul {
 }
 button {
   cursor: pointer;
+  background-color: transparent;
+  padding: 0;
+  line-height: 0;
 }
 .visually-hidden {
   position: absolute;
