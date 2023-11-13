@@ -109,7 +109,7 @@ button {
   padding-bottom: 40px;
   padding-right: 24px;
 }
-.is-open {
+.mobile-burger-menu.is-open {
   transform: translateX(0);
 }
 
@@ -809,16 +809,16 @@ button {
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
   z-index: 999999;
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .is-open {
-  opacity: 1;
-  pointer-events: auto;
-  visibility: visible;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 /* ========================/ BACKDROP MOBILE STYLES========================= */
 /* ========================MODAL MOBILE STYLES========================= */
