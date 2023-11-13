@@ -999,6 +999,9 @@ button {
   .modal {
     width: 408px;
   }
+  .form-checkbox-label {
+    align-items: baseline;
+  }
 }
 
 /* ========================/MODAL FORM TABLET STYLES========================= */
