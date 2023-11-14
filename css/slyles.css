@@ -766,6 +766,7 @@ button {
   .footer-form-wrapper {
     display: block;
     height: auto;
+    width: auto;
   }
   .footer-email {
     width: 264px;
