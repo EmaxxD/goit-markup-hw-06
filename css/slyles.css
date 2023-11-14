@@ -109,7 +109,7 @@ button {
   padding-bottom: 40px;
   padding-right: 24px;
 }
-.mobile-burger-menu.is-open {
+.mobile-burger-menu.is-hidden {
   transform: translateX(0);
 }
 
@@ -118,8 +118,8 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 24px;
-  right: 24px;
+  top: 16px;
+  right: 16px;
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -380,6 +380,7 @@ button {
   .hero {
     padding-top: 188px;
     padding-bottom: 188px;
+    max-width: 1440px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -760,9 +761,11 @@ button {
   .footer-form {
     flex-direction: row;
     gap: 24px;
+    width: auto;
   }
   .footer-form-wrapper {
     display: block;
+    height: auto;
   }
   .footer-email {
     width: 264px;
@@ -784,6 +787,9 @@ button {
   }
   .logotype {
     margin-right: auto;
+  }
+  .footer .socialmedia-list {
+    gap: 16px;
   }
   .socialmedia-wrapper {
     margin-right: auto;
