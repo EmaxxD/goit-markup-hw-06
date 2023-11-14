@@ -320,7 +320,7 @@ button {
   line-height: 1.1;
   letter-spacing: 0.02em;
   color: #ffffff;
-  width: 288px;
+  max-width: 224px;
   text-align: center;
   margin-bottom: 72px;
   text-transform: capitalize;
@@ -370,7 +370,7 @@ button {
   .hero-title {
     font-size: 56px;
     line-height: 1.07;
-    width: 496px;
+    max-width: 496px;
     margin-bottom: 36px;
   }
 }
@@ -698,8 +698,11 @@ button {
   letter-spacing: 0.02em;
   color: #ffffff;
 }
+.footer-email {
+  margin: 0 auto;
+}
 .footer-form-email {
-  width: 100%;
+  width: 288px;
   height: 40px;
   font-size: 12px;
   line-height: 1.5;
